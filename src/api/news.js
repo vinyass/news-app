@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiData = {
-  baseUrl: "http://newsapi.org/v2/top-headlines",
+  baseUrl: "https://newsapi.org/v2/top-headlines",
   key: `${process.env.REACT_APP_API_KEY}`,
 };
 
