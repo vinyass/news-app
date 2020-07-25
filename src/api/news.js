@@ -2,7 +2,7 @@ import axios from "axios";
 
 const apiData = {
   baseUrl: "http://newsapi.org/v2/top-headlines",
-  key: `${process.env.API_KEY}`,
+  key: `${process.env.REACT_APP_API_KEY}`,
 };
 
 export const fetchNews = async (
