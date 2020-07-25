@@ -95,7 +95,7 @@ const categories = [
   },
 ];
 
-const NewsFilter = (props) => {
+const NewsFilter = ({ updateData }) => {
   const classes = useStyles();
   const [country, setCountry] = useState("in");
   const [category, setCategory] = useState("");
@@ -107,7 +107,8 @@ const NewsFilter = (props) => {
       category: category,
       searchText: searchText,
     };
-    props.updateData(filter);
+    updateData(filter);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [country, category]);
 
   return (
@@ -153,17 +154,17 @@ const NewsFilter = (props) => {
               category: category,
               searchText: searchText,
             };
-            props.updateData(filter);
+            updateData(filter);
           }}
           onKeyDown={(e) => {
             const code = e.keyCode ? e.keyCode : e.which;
-            if (code == 13) {
+            if (code === 13) {
               const filter = {
                 country: country,
                 category: category,
                 searchText: searchText,
               };
-              props.updateData(filter);
+              updateData(filter);
             }
           }}
         />

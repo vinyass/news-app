@@ -6,7 +6,6 @@ import {
   CardMedia,
   Typography,
   makeStyles,
-  useTheme,
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +41,6 @@ const NewsDisplay = ({
   currentNews: { title, description, url, urlToImage },
 }) => {
   const classes = useStyles();
-  const theme = useTheme();
   return (
     <div className={classes.newsContainer}>
       <Card className={classes.root}>
